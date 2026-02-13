@@ -1,0 +1,249 @@
+/*
+  All gradient, color, and text changes for the new palette are now in place for ClassroomLayout.css.
+  To undo, restore this file from version control or backup.
+*/
+
+/* --- Modal Styles --- */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(30, 41, 59, 0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.4s ease;
+  backdrop-filter: blur(4px);
+}
+
+.modal-overlay.open {
+  opacity: 1;
+  pointer-events: all;
+}
+
+.modal {
+  background: white;
+  padding: 2rem;
+  border-radius: 1rem;
+  width: 90%;
+  max-width: 400px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+  transform: translateY(-30px) scale(0.95);
+  animation: swoopIn 0.4s ease forwards;
+}
+
+@keyframes swoopIn {
+  from {
+    opacity: 0;
+    transform: translateY(-30px) scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+.modal input {
+  display: block;
+  width: 100%;
+  margin-bottom: 1rem;
+  padding: 0.6rem 1rem;
+  border-radius: 8px;
+  border: 1px solid var(--color-border);
+  font-size: 1rem;
+  outline: none;
+  transition: border 0.2s;
+}
+
+.modal input:focus {
+  border-color: var(--color-primary);
+}
+
+.modal button {
+  margin-right: 0.5rem;
+  padding: 0.6rem 1.2rem;
+  font-weight: bold;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s;
+  color: #fff !important;
+  text-shadow: 0 1px 4px rgba(29,26,57,0.18);
+}
+
+.modal button:hover {
+  opacity: 0.9;
+}
+
+.modal .close-btn {
+  background-color: var(--color-bg-light);
+  color: white;
+}
+
+.modal .close-btn:hover {
+  background-color: var(--color-bg-medium);
+}
+
+.modal button:not(.close-btn) {
+  background-color: var(--color-primary);
+  color: white;
+}
+
+.modal button:not(.close-btn):hover {
+  background-color: var(--color-accent2);
+}
+
+/* --- Floating Title Enhancement (Optional) --- */
+.floating-title-container {
+  margin-bottom: 2rem;
+}
+
+.floating-title {
+  font-size: clamp(2rem, 7vw, 5rem);
+  text-align: center;
+  color: var(--raw-sienna-700);
+  font-family: 'Warbler', serif;
+  font-weight: 900;
+  letter-spacing: 0.04em;
+}
+@import url('https://fonts.googleapis.com/css2?family=Warbler:opsz,wght@16..144,700&display=swap');
+
+/* --- Button Container --- */
+.add-btn-container {
+  display: flex;
+  justify-content: flex-end;
+  margin: 0 0 1.5rem 0;
+}
+
+.open-modal-btn {
+  background: linear-gradient(90deg, var(--color-bg-dark), var(--color-bg-medium));
+  color: var(--color-accent2);
+  border: none;
+  padding: 0.8rem 1.5rem;
+  font-size: 1rem;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background 0.3s;
+  box-shadow: 0 2px 8px rgba(29,26,57,0.10);
+  font-weight: 700;
+  color: #fff !important;
+  text-shadow: 0 1px 4px rgba(29,26,57,0.18);
+}
+.open-modal-btn:hover {
+  background: linear-gradient(90deg, var(--color-bg-medium), var(--color-bg-dark));
+  color: var(--color-accent2);
+}
+
+/* Add Classroom Form Styles */
+.add-classroom-form {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 2rem;
+  flex-wrap: wrap;
+}
+
+.add-classroom-form input {
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  border: 1px solid var(--color-border);
+  font-size: 1rem;
+}
+
+.add-classroom-form button {
+  padding: 0.5rem 1.2rem;
+  background: linear-gradient(90deg, var(--color-primary), var(--color-secondary));
+  color: var(--color-bg-dark);
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background 0.3s;
+  color: #fff !important;
+  text-shadow: 0 1px 4px rgba(29,26,57,0.18);
+}
+.add-classroom-form button:hover {
+  background: linear-gradient(90deg, var(--color-secondary), var(--color-primary));
+}
+
+.classroom-page {
+  padding: 2rem;
+  background: linear-gradient(135deg, var(--raw-sienna-50), var(--raw-sienna-100));
+  min-height: 100vh;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.title {
+  text-align: center;
+  font-size: 2.5rem;
+  color: var(--raw-sienna-900);
+  margin-bottom: 2rem;
+  animation: fadeInDown 1s ease-in-out;
+}
+
+.classroom-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 1.5rem;
+  padding: 1rem;
+}
+
+.classroom-card {
+  background: linear-gradient(135deg, var(--color-bg-dark) 0%, var(--color-bg-medium) 100%);
+  border-radius: 1rem;
+  box-shadow: 0 10px 20px rgba(29,26,57,0.08);
+  padding: 1.2rem;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  animation: fadeInUp 0.8s ease forwards;
+  opacity: 0;
+}
+
+.classroom-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 15px 30px rgba(96, 43, 39, 0.15);
+}
+
+.classroom-name {
+  font-size: 1.3rem;
+  font-weight: bold;
+  color: var(--color-accent2);
+  background: linear-gradient(90deg, var(--color-bg-dark), var(--color-bg-medium));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: white;
+  background-clip: text;
+}
+
+.classroom-floor {
+  font-size: 1rem;
+  color: var(--color-bg-soft);
+  margin-top: 0.5rem;
+}
+
+/* Animations */
+@keyframes fadeInUp {
+  from {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes fadeInDown {
+  from {
+    transform: translateY(-20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}

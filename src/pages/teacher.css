@@ -1,0 +1,155 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+.dashboard-container {
+  background: #f9fafb;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  background: white;
+  padding: 1rem;
+  border-bottom: 1px solid #ddd;
+  position: sticky;
+  top: 0;
+}
+
+.logo {
+  font-weight: bold;
+}
+
+.nav-links {
+  display: flex;
+  gap: 1rem;
+}
+
+.nav-item {
+  cursor: pointer;
+  color: gray;
+}
+
+.nav-item.active {
+  color: blue;
+  font-weight: bold;
+}
+
+.avatar {
+  background: #eee;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.avatar.large {
+  width: 50px;
+  height: 50px;
+}
+
+.content {
+  padding: 1rem;
+}
+
+.card {
+  background: white;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  border-radius: 6px;
+  box-shadow: 0 0 4px rgba(0,0,0,0.1);
+}
+
+.card-header {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+.card-date {
+  text-align: right;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+.grid {
+  display: flex;
+  gap: 1rem;
+}
+
+.main-section {
+  flex: 2;
+}
+
+.calendar-section {
+  flex: 1;
+}
+
+.calendar-days {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 4px;
+}
+
+.calendar-day {
+  background: #f0f0f0;
+  padding: 8px;
+  text-align: center;
+  cursor: pointer;
+  border-radius: 4px;
+  position: relative;
+}
+
+.calendar-day.today {
+  background: #d0e4ff;
+}
+
+.calendar-day.exam-day {
+  background: #fff2cc;
+}
+
+.available-icon {
+  position: absolute;
+  top: 2px;
+  right: 2px;
+  color: green;
+}
+
+.not-available-icon {
+  position: absolute;
+  top: 2px;
+  right: 2px;
+  color: red;
+}
+
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.modal {
+  background: white;
+  padding: 1rem;
+  border-radius: 6px;
+  max-width: 300px;
+}
+
+.modal-actions {
+  display: flex;
+  gap: 0.5rem;
+  margin-top: 1rem;
+}
+
+button {
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+}

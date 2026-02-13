@@ -1,0 +1,88 @@
+/* Wrapper to ensure scrollability */
+.auth-wrapper {
+  min-height: 100vh;
+  width: 100%;
+  overflow-y: auto;
+  background: linear-gradient(120deg, #f0f4f8, #d9e2ec);
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 40px 20px;
+}
+
+.auth-container {
+  width: 100%;
+  max-width: 420px;
+  display: flex;
+  justify-content: center;
+}
+
+.auth-box {
+  width: 100%;
+  background: rgba(255, 255, 255, 0.95);
+  padding: 2rem;
+  border-radius: 18px;
+  box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+  backdrop-filter: blur(8px);
+  transition: all 0.3s ease;
+}
+
+.auth-header {
+  margin-bottom: 1.2rem;
+  text-align: center;
+}
+
+.auth-header h2 {
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.switches {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-bottom: 1rem;
+}
+
+.switches select,
+.switches button {
+  padding: 8px 12px;
+  border: none;
+  border-radius: 8px;
+  background-color: #f0f0f0;
+  cursor: pointer;
+  width: 100%;
+  font-size: 0.95rem;
+  text-align: center;
+}
+
+.auth-form {
+  width: 100%;
+}
+
+.auth-form input {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 12px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 1rem;
+  box-sizing: border-box;
+}
+
+.submit-btn {
+  width: 100%;
+  padding: 12px;
+  background-color: #007f5f;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  font-size: 1rem;
+  font-weight: 600;
+  transition: 0.3s ease;
+  cursor: pointer;
+}
+
+.submit-btn:hover {
+  background-color: #005f3c;
+}

@@ -1,0 +1,118 @@
+
+.body-section {
+  background: linear-gradient(135deg, var(--raw-sienna-50) 0%, var(--raw-sienna-100) 100%);
+  min-height: 350px;
+  padding: 80px 0 60px 0;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.body-section::before {
+  content: '';
+  position: absolute;
+  top: -80px;
+  left: -80px;
+  width: 300px;
+  height: 300px;
+  background: radial-gradient(circle, var(--raw-sienna-100) 0%, transparent 70%);
+  opacity: 0.4;
+  z-index: 0;
+}
+
+.body-section::after {
+  content: '';
+  position: absolute;
+  bottom: -100px;
+  right: -100px;
+  width: 350px;
+  height: 350px;
+  background: radial-gradient(circle, var(--raw-sienna-400) 0%, transparent 70%);
+  opacity: 0.18;
+  z-index: 0;
+}
+
+
+.body-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 32px;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.body-row {
+  display: flex;
+  flex-direction: row;
+  gap: 40px;
+  justify-content: center;
+}
+
+
+
+.body-btn {
+  background: linear-gradient(90deg, var(--color-primary) 0%, var(--color-bg-soft) 100%);
+  color: var(--color-bg-dark);
+  border: none;
+  min-width: 260px;
+  min-height: 120px;
+  padding: 0 24px;
+  border-radius: 18px;
+  font-size: 1.5rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background 0.18s, color 0.18s, box-shadow 0.18s, transform 0.18s;
+  box-shadow: 0 8px 32px rgba(185, 147, 90, 0.18), 0 2px 8px rgba(0,0,0,0.10);
+  margin: 10px 0;
+  outline: none;
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  letter-spacing: 0.5px;
+  line-height: 1.2;
+  white-space: normal;
+  word-break: break-word;
+  border: 2px solid rgba(185, 147, 90, 0.10);
+  backdrop-filter: blur(1.5px);
+}
+
+.body-btn:active {
+  transform: scale(0.97);
+}
+
+.body-btn:hover, .body-btn:focus {
+  background: linear-gradient(90deg, var(--color-bg-light) 0%, var(--color-bg-dark) 100%);
+  color: var(--color-text-alt);
+  box-shadow: 0 14px 40px rgba(166, 124, 82, 0.22), 0 6px 20px rgba(0,0,0,0.15);
+  transform: translateY(-4px) scale(1.04);
+  border: 2.5px solid var(--color-bg-light);
+}
+
+.body-btn span {
+  display: block;
+  width: 100%;
+  font-size: 1.5rem;
+  font-weight: 700;
+  padding: 0;
+  text-shadow: 0 2px 8px rgba(185, 147, 90, 0.10);
+  letter-spacing: 0.5px;
+}
+
+.body-btn span {
+  display: block;
+  width: 100%;
+  font-size: 1.5rem;
+  font-weight: 600;
+  padding: 0;
+}
+
+.body-btn:active {
+  transform: scale(0.97);
+}
+
+
