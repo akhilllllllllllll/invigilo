@@ -16,9 +16,9 @@ function AssignTeachers() {
   const fetchAllData = async () => {
     try {
       const [teacherRes, classroomRes, assignmentRes] = await Promise.all([
-        fetch('http://127.0.0.1:8000/api/teachers/'),
-        fetch('http://127.0.0.1:8000/api/halls/'),
-        fetch('http://127.0.0.1:8000/api/assignments/'), // ✅ updated
+        fetch('https://invigilo-backend.onrender.com/api/teachers/'),
+        fetch('https://invigilo-backend.onrender.com/api/halls/'),
+        fetch('https://invigilo-backend.onrender.com/api/assignments/'), // ✅ updated
       ]);
 
       const teachersData = await teacherRes.json();
@@ -41,7 +41,7 @@ function AssignTeachers() {
     }
 
     try {
-      const res = await fetch('http://127.0.0.1:8000/api/assign-teacher/', {
+      const res = await fetch('https://invigilo-backend.onrender.com/api/assign-teacher/', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
@@ -64,7 +64,7 @@ function AssignTeachers() {
 
   const handleAutoAssign = async () => {
     try {
-      const res = await fetch('http://127.0.0.1:8000/api/assign-teacher/', {
+      const res = await fetch('https://invigilo-backend.onrender.com/api/assign-teacher/', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ random: true }),

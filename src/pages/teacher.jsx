@@ -74,8 +74,8 @@ const TeacherDashboard = () => {
 
       // Load teachers and halls for request form
       try {
-        const teacherRes = await fetch('http://127.0.0.1:8000/api/teachers/');
-        const hallRes = await fetch('http://127.0.0.1:8000/api/halls/');
+        const teacherRes = await fetch('https://invigilo-backend.onrender.com/api/teachers/');
+        const hallRes = await fetch('https://invigilo-backend.onrender.com/api/halls/');
         
         if (teacherRes.ok) setTeachers(await teacherRes.json());
         if (hallRes.ok) setHalls(await hallRes.json());

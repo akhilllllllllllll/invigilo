@@ -71,8 +71,8 @@ function HeroSection() {
       // Fetch teachers and halls from your existing API
       try {
         console.log('Fetching teachers from API...');
-        const teacherRes = await fetch('http://127.0.0.1:8000/api/teachers/');
-        const hallRes = await fetch('http://127.0.0.1:8000/api/halls/');
+        const teacherRes = await fetch('https://invigilo-backend.onrender.com/api/teachers/');
+        const hallRes = await fetch('https://invigilo-backend.onrender.com/api/halls/');
         
         if (teacherRes.ok && hallRes.ok) {
           const teachersData = await teacherRes.json();
@@ -139,7 +139,7 @@ function HeroSection() {
 
       console.log('Creating teacher with payload:', payload);
 
-      const response = await fetch('http://127.0.0.1:8000/api/teachers/', {
+      const response = await fetch('https://invigilo-backend.onrender.com/api/teachers/', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(payload),
@@ -185,7 +185,7 @@ function HeroSection() {
 
       console.log('Creating hall with payload:', payload);
 
-      const response = await fetch('http://127.0.0.1:8000/api/halls/', {
+      const response = await fetch('https://invigilo-backend.onrender.com/api/halls/', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(payload),

@@ -20,7 +20,7 @@ const AuthPage = () => {
 
       if (isAdmin) {
         // Admin login
-        response = await fetch('http://127.0.0.1:8000/api/login/', {
+        response = await fetch('https://invigilo-backend.onrender.com/api/login/', {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify({
@@ -32,7 +32,7 @@ const AuthPage = () => {
       } else {
         if (mode === 'signup') {
           // Teacher Signup
-          response = await fetch('http://127.0.0.1:8000/api/signup/', {
+          response = await fetch('https://invigilo-backend.onrender.com/api/signup/', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({
@@ -45,7 +45,7 @@ const AuthPage = () => {
           });
         } else {
           // Teacher Login
-          response = await fetch('http://127.0.0.1:8000/api/login/', {
+          response = await fetch('https://invigilo-backend.onrender.com/api/login/', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({

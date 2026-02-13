@@ -11,8 +11,8 @@ function HeroSection() {
 
   const fetchData = async () => {
     try {
-      const teacherRes = await fetch('http://127.0.0.1:8000/api/teachers/');
-      const hallRes = await fetch('http://127.0.0.1:8000/api/halls/');
+      const teacherRes = await fetch('https://invigilo-backend.onrender.com/api/teachers/');
+      const hallRes = await fetch('https://invigilo-backend.onrender.com/api/halls/');
       setTeachers(await teacherRes.json());
       setExamHalls(await hallRes.json());
     } catch (err) {
@@ -28,7 +28,7 @@ function HeroSection() {
 
   const handleTeacherSubmit = async (e) => {
     e.preventDefault();
-    await fetch('http://127.0.0.1:8000/api/teachers/', {
+    await fetch('https://invigilo-backend.onrender.com/api/teachers/', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify(newTeacher),
@@ -40,7 +40,7 @@ function HeroSection() {
 
   const handleHallSubmit = async (e) => {
     e.preventDefault();
-    await fetch('http://127.0.0.1:8000/api/halls/', {
+    await fetch('https://invigilo-backend.onrender.com/api/halls/', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify(newHall),
