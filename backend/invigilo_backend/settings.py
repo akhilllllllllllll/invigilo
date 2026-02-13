@@ -5,7 +5,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 
 # --- Security ---
 SECRET_KEY = 'django-insecure-yfvw1$us#o8#k(x578w0q@@qrjr8_7xtb)aa1wp5iflp+wltdt'
-DEBUG = True
+DEBUG = False
 ALLOWED_HOSTS = ['invigilo-backend.onrender.com']
 
 # --- Installed Applications ---
